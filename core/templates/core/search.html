@@ -1,0 +1,16 @@
+<h1>Search Notes</h1>
+
+<p>Logged in as: {{ request.user.username }}</p>
+
+<form method="get">
+    <input name="q" placeholder="Search title">
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+{% for note in notes %}
+    <li>{{ note.title }}</li>
+{% endfor %}
+</ul>
+
+<a href="/">Back</a>

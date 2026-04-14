@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input name="username" placeholder="Username"><br><br>
+    <input name="password" type="password" placeholder="Password"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<a href="/register/">Register</a>
+
+<div style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc;">
+    <strong>Login status info</strong><br>
+    Failed attempts: {{ attempts }}
+</div>

@@ -1,0 +1,12 @@
+<h1>Create Note</h1>
+<p>Logged in as: {{ request.user.username }}</p>
+<form method="post">
+
+    {% csrf_token %}
+
+    <input name="title" placeholder="Title"><br><br>
+    <textarea name="content" placeholder="Content"></textarea><br><br>
+    <button type="submit">Save</button>
+</form>
+
+<a href="/">Back</a>
