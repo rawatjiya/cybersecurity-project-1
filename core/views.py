@@ -5,7 +5,7 @@ from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
 from .models import Note
 from django.db import connection
-#import time #(for simulating delay in login attempts: flaw 4 fix)
+
 def index(request):
     if not request.user.is_authenticated:
         return redirect("/login/")
