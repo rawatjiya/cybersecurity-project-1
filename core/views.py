@@ -132,7 +132,7 @@ def note_detail(request, note_id):
         return redirect("/login/")
     ##FLAW 3: A01: Broken Access Control vulnerability
     note = Note.objects.get(id=note_id) 
-    ##FLAW 3 FIX:
+    ##FLAW 3 FIX: Add control check 
     #if note.owner != request.user:
         #return HttpResponse("Unauthorized", status=403)
     return render(request, "core/detail.html", {"note": note})
